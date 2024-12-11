@@ -1,9 +1,11 @@
+// ignore: file_names
 import 'package:flutter/material.dart';
 import 'package:animate_do/animate_do.dart' as animate;
+import 'package:project/Presentation/LoginScreen/LoginScreen.dart';
 import 'package:project/Presentation/RegisterSCreen/RegisterScreen.dart';
 
 class AnimatedUiFirstScreen extends StatefulWidget {
-  AnimatedUiFirstScreen({super.key});
+  const AnimatedUiFirstScreen({super.key});
 
   @override
   State<AnimatedUiFirstScreen> createState() => _AnimatedUiFirstScreenState();
@@ -58,7 +60,14 @@ class _AnimatedUiFirstScreenState extends State<AnimatedUiFirstScreen> {
                     animate.FadeIn(
                       delay: const Duration(seconds: 2),
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const LoginScreen(),
+                            ),
+                          );
+                        },
                         style: ButtonStyle(
                           side: const WidgetStatePropertyAll(
                             BorderSide(color: Colors.black),
@@ -92,7 +101,7 @@ class _AnimatedUiFirstScreenState extends State<AnimatedUiFirstScreen> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => RegisterScreen(),
+                              builder: (context) => const RegisterScreen(),
                             ),
                           );
                         },
@@ -117,7 +126,7 @@ class _AnimatedUiFirstScreenState extends State<AnimatedUiFirstScreen> {
                     animate.FadeIn(
                       child: TextButton(
                         onPressed: () {},
-                        child: Text(
+                        child: const Text(
                           "Continue as guest",
                           style: TextStyle(color: Colors.teal),
                         ),

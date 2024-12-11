@@ -17,7 +17,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.all(10),
+          padding: const EdgeInsets.all(10),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -74,7 +74,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           obsecureText: false,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 10,
                       ),
                       FadeIn(
@@ -88,7 +88,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           obsecureText: false,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 10,
                       ),
                       FadeIn(
@@ -102,7 +102,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           obsecureText: false,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 10,
                       ),
                       FadeIn(
@@ -150,7 +150,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.all(10),
+                padding: const EdgeInsets.all(10),
                 child: SizedBox(
                   child: Column(
                     children: [
