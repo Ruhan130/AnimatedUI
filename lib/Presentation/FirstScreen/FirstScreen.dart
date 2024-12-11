@@ -33,7 +33,7 @@ class _AnimatedUiFirstScreenState extends State<AnimatedUiFirstScreen> {
               child: SizedBox(
                 child: Column(
                   children: [
-                    animate.FadeIn(
+                    animate.Bounce(
                       delay: const Duration(seconds: 1),
                       child: Container(
                         height: 60,
@@ -47,12 +47,14 @@ class _AnimatedUiFirstScreenState extends State<AnimatedUiFirstScreen> {
                         ),
                       ),
                     ),
-                    const Text(
-                      "Flutter Spirit ❤️",
-                      style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 20,
-                          fontFamily: "Urbanist-SemiBold"),
+                    animate.FadeIn(delay: Duration(seconds: 2),
+                      child: const Text(
+                        "Flutter Spirit ❤️",
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 20,
+                            fontFamily: "Urbanist-SemiBold"),
+                      ),
                     ),
                     const SizedBox(
                       height: 60,
@@ -69,6 +71,8 @@ class _AnimatedUiFirstScreenState extends State<AnimatedUiFirstScreen> {
                           );
                         },
                         style: ButtonStyle(
+                          padding: const WidgetStatePropertyAll(
+                              EdgeInsets.only(top: 15, bottom: 15)),
                           side: const WidgetStatePropertyAll(
                             BorderSide(color: Colors.black),
                           ),
@@ -83,7 +87,7 @@ class _AnimatedUiFirstScreenState extends State<AnimatedUiFirstScreen> {
                           ),
                         ),
                         child: const Text(
-                          "Login",
+                          "LOGIN",
                           style: TextStyle(
                               color: Colors.white,
                               fontFamily: "Urbanist-SemiBold",
@@ -106,6 +110,8 @@ class _AnimatedUiFirstScreenState extends State<AnimatedUiFirstScreen> {
                           );
                         },
                         style: ButtonStyle(
+                          padding: const WidgetStatePropertyAll(
+                              EdgeInsets.only(top: 15, bottom: 15)),
                           side: const WidgetStatePropertyAll(
                             BorderSide(color: Colors.black),
                           ),
@@ -117,7 +123,7 @@ class _AnimatedUiFirstScreenState extends State<AnimatedUiFirstScreen> {
                             Size.fromWidth(370),
                           ),
                         ),
-                        child: const Text("Register"),
+                        child: const Text("REGISTER"),
                       ),
                     ),
                     const SizedBox(
