@@ -5,7 +5,8 @@ class CustomTextfield extends StatefulWidget {
   final bool obsecureText;
   final String? hintText;
   final TextStyle? hintTextStyle ;
-  const CustomTextfield({super.key, this.controller, required this.obsecureText,required this.hintText,required this.hintTextStyle});
+  final Widget? sufixIcon;
+  const CustomTextfield({super.key, this.controller, required this.obsecureText,required this.hintText,required this.hintTextStyle,this.sufixIcon});
 
   @override
   State<CustomTextfield> createState() => _CustomTextfieldState();
@@ -19,11 +20,13 @@ class _CustomTextfieldState extends State<CustomTextfield> {
       obscureText: widget.obsecureText,
       decoration: InputDecoration(
         contentPadding: EdgeInsets.all(18),
+        suffixIcon: widget.sufixIcon,
         border: OutlineInputBorder(
           borderSide: BorderSide(color: Colors.black),
           borderRadius: BorderRadius.circular(12)
         ),hintText: widget.hintText,
-        hintStyle: widget.hintTextStyle 
+        hintStyle: widget.hintTextStyle,
+         
       ),
     );
   }

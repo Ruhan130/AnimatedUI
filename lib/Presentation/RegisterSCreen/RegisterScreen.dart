@@ -39,7 +39,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    FadeIn(
+                    Bounce(
                       delay: const Duration(seconds: 1),
                       child: const Text(
                         "Hello! Register to get",
@@ -47,7 +47,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                             fontSize: 20, fontWeight: FontWeight.bold),
                       ),
                     ),
-                    FadeIn(
+                    Bounce(
                       delay: const Duration(seconds: 2),
                       child: const Text(
                         " Started",
@@ -95,6 +95,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         delay: const Duration(seconds: 5),
                         child: const CustomTextfield(
                           hintText: 'Password',
+                          sufixIcon: Icon(Icons.visibility),
                           hintTextStyle: TextStyle(
                             color: Colors.black,
                             fontFamily: "Urbanist-SemiBold",
@@ -109,6 +110,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         delay: const Duration(seconds: 5),
                         child: const CustomTextfield(
                           hintText: 'Conform',
+                          sufixIcon: Icon(Icons.visibility),
                           hintTextStyle: TextStyle(
                             color: Colors.black,
                             fontFamily: "Urbanist-SemiBold",
@@ -124,7 +126,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 height: 15,
               ),
               FadeIn(
-                delay: const Duration(seconds: 2),
+                delay: const Duration(seconds: 4),
                 child: ElevatedButton(
                   onPressed: () {},
                   style: ButtonStyle(
@@ -170,7 +172,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
               const SizedBox(
                 height: 20,
               ),
-              FadeIn(
+              Bounce(
                 delay: const Duration(seconds: 3),
                 child: Padding(
                   padding: const EdgeInsets.only(
@@ -193,7 +195,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 height: 10,
               ),
               FadeIn(
-                delay: const Duration(seconds: 3),
+                delay: const Duration(seconds: 6),
                 child: const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
