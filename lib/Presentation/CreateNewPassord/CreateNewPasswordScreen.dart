@@ -36,7 +36,7 @@ class CreateNewPasswordScreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     FadeIn(
-                      delay: const Duration(seconds: 2),
+                      delay: const Duration(seconds: 1),
                       child: const Text(
                         "Create new password",
                         style: TextStyle(
@@ -46,7 +46,7 @@ class CreateNewPasswordScreen extends StatelessWidget {
                       ),
                     ),
                     Bounce(
-                      delay: const Duration(milliseconds: 500),
+                      delay: const Duration(seconds: 2),
                       child: const Text(
                         "Your new password must be unique from those\n previously used",
                         style: TextStyle(color: Colors.grey),
@@ -86,7 +86,7 @@ class CreateNewPasswordScreen extends StatelessWidget {
                             height: 15,
                           ),
                           FadeIn(
-                            delay: const Duration(seconds: 3),
+                            delay: const Duration(seconds: 4),
                             child: CustomElevatedButtomDark(
                               text: 'Reset Password',
                               onpressed: () {

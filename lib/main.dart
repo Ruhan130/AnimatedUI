@@ -7,7 +7,7 @@ void main() {
 
 class MyApp extends StatelessWidget {
   static final ValueNotifier<ThemeMode> themeNotifier =
-      ValueNotifier(ThemeMode.system);
+      ValueNotifier(ThemeMode.light);  // Start with light mode
 
   const MyApp({super.key});
 
@@ -19,10 +19,11 @@ class MyApp extends StatelessWidget {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
           theme: ThemeData(
-              brightness: Brightness.light,
-              useMaterial3: true,
-              primaryColor: Color(0xFF35C2C1),
-              textTheme: Typography.blackCupertino),
+            brightness: Brightness.light,
+            useMaterial3: true,
+            primaryColor: Color(0xFF35C2C1),
+            textTheme: Typography.blackCupertino,
+          ),
           themeMode: themeMode,
           darkTheme: ThemeData.dark(useMaterial3: true),
           home: const AnimatedUiFirstScreen(),

@@ -54,17 +54,15 @@ class OtpVerificationCode extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     FadeIn(
-                      delay: const Duration(seconds: 2),
+                      delay: const Duration(seconds: 1),
                       child: const Text(
                         "OPT Verification",
                         style: TextStyle(
-                            fontSize: 20,
-                            
-                            fontWeight: FontWeight.bold),
+                            fontSize: 20, fontWeight: FontWeight.bold),
                       ),
                     ),
                     Bounce(
-                      delay: const Duration(milliseconds: 500),
+                      delay: const Duration(seconds: 2),
                       child: const Text(
                         "Enter the verification code we just send on your\n email address",
                         style: TextStyle(color: Colors.grey),
@@ -101,14 +99,16 @@ class OtpVerificationCode extends StatelessWidget {
                       const SizedBox(
                         height: 30.0,
                       ),
-                      FadeIn(delay: const Duration(seconds: 4),
+                      FadeIn(
+                        delay: const Duration(seconds: 4),
                         child: CustomElevatedButtomDark(
                           text: 'Verify',
                           onpressed: () {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => const CreateNewPasswordScreen(),
+                                builder: (context) =>
+                                    const CreateNewPasswordScreen(),
                               ),
                             );
                           },
@@ -141,8 +141,9 @@ class OtpVerificationCode extends StatelessWidget {
                           );
                         },
                         child: const Text(
-                          "Register Now?" ,
-                          style: TextStyle(color: Colors.teal,fontWeight: FontWeight.bold),
+                          "Register Now?",
+                          style: TextStyle(
+                              color: Colors.teal, fontWeight: FontWeight.bold),
                         ))
                   ],
                 ),

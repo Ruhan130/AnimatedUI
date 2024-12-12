@@ -2,8 +2,8 @@ import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:project/Presentation/LoginScreen/LoginScreen.dart';
-import 'package:project/main.dart'; // Import the main.dart file for theme notifier
 import 'package:project/core/widgets/CustomElevatedButtonDar.dart';
+import 'package:project/main.dart';
 
 class ChangedPasswordScreen extends StatefulWidget {
   const ChangedPasswordScreen({super.key});
@@ -16,6 +16,19 @@ class _ChangedPasswordScreenState extends State<ChangedPasswordScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        automaticallyImplyLeading: MyApp.themeNotifier.value == ThemeMode.light, // Back button will be visible only in light mode
+        title: const Text("Password Changed"),
+        actions: [
+          if (MyApp.themeNotifier.value == ThemeMode.light) // Show back button only in light mode
+            IconButton(
+              icon: const Icon(Icons.arrow_back_ios),
+              onPressed: () {
+                Navigator.pop(context);
+              },
+            ),
+        ],
+      ),
       body: SafeArea(
         child: Column(
           children: [
@@ -30,7 +43,7 @@ class _ChangedPasswordScreenState extends State<ChangedPasswordScreen> {
             FadeIn(
               delay: const Duration(seconds: 2),
               child: const Text(
-                'Your password has been changed sucessfully',
+                'Your password has been changed successfully',
                 style: TextStyle(color: Colors.grey),
               ),
             ),
@@ -44,10 +57,16 @@ class _ChangedPasswordScreenState extends State<ChangedPasswordScreen> {
                 child: CustomElevatedButtomDark(
                   text: 'Back to Login',
                   onpressed: () {
-                    // Activate dark mode
-                    MyApp.themeNotifier.value = ThemeMode.dark;
+                    // Toggle theme mode
+                    if (MyApp.themeNotifier.value == ThemeMode.light) {
+                      MyApp.themeNotifier.value =
+                          ThemeMode.dark; // Switch to dark mode
+                    } else {
+                      MyApp.themeNotifier.value =
+                          ThemeMode.light; // Switch to light mode
+                    }
 
-                    // Navigate back to login
+                    // Navigate back to the login screen
                     Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(
