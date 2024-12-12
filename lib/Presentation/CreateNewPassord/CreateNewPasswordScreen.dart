@@ -88,7 +88,7 @@ class CreateNewPasswordScreen extends StatelessWidget {
                           FadeIn(
                             delay: const Duration(seconds: 3),
                             child: CustomElevatedButtomDark(
-                              text: 'Enter Password',
+                              text: 'Reset Password',
                               onpressed: () {
                                 Navigator.push(
                                   context,
