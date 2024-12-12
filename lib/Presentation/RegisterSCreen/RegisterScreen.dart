@@ -191,7 +191,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   ),
                 ),
               ),
-              Spacer(),
+              const Spacer(),
               FadeIn(
                 delay: const Duration(seconds: 4),
                 child: Row(

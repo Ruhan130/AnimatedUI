@@ -47,7 +47,7 @@ class _AnimatedUiFirstScreenState extends State<AnimatedUiFirstScreen> {
                         ),
                       ),
                     ),
-                    animate.FadeIn(delay: Duration(seconds: 2),
+                    animate.FadeIn(delay: const Duration(seconds: 2),
                       child: const Text(
                         "Flutter Spirit ❤️",
                         style: TextStyle(

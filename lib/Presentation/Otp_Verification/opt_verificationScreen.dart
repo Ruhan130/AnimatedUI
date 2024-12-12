@@ -59,7 +59,7 @@ class OtpVerificationCode extends StatelessWidget {
                         "OPT Verification",
                         style: TextStyle(
                             fontSize: 20,
-                            color: Colors.black,
+                            
                             fontWeight: FontWeight.bold),
                       ),
                     ),
@@ -101,7 +101,7 @@ class OtpVerificationCode extends StatelessWidget {
                       const SizedBox(
                         height: 30.0,
                       ),
-                      FadeIn(delay: Duration(seconds: 4),
+                      FadeIn(delay: const Duration(seconds: 4),
                         child: CustomElevatedButtomDark(
                           text: 'Verify',
                           onpressed: () {

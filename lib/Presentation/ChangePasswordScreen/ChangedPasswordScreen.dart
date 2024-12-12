@@ -1,7 +1,8 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import 'package:project/Presentation/FirstScreen/FirstScreen.dart';
+import 'package:project/Presentation/LoginScreen/LoginScreen.dart';
+import 'package:project/main.dart'; // Import the main.dart file for theme notifier
 import 'package:project/core/widgets/CustomElevatedButtonDar.dart';
 
 class ChangedPasswordScreen extends StatefulWidget {
@@ -43,11 +44,16 @@ class _ChangedPasswordScreenState extends State<ChangedPasswordScreen> {
                 child: CustomElevatedButtomDark(
                   text: 'Back to Login',
                   onpressed: () {
+                    // Activate dark mode
+                    MyApp.themeNotifier.value = ThemeMode.dark;
+
+                    // Navigate back to login
                     Navigator.pushReplacement(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const AnimatedUiFirstScreen(),
-                        ));
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const LoginScreen(),
+                      ),
+                    );
                   },
                 ),
               ),

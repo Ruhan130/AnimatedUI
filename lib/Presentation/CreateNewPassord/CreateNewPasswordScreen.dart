@@ -13,7 +13,7 @@ class CreateNewPasswordScreen extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.all(10.0),
+          padding: const EdgeInsets.all(10.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -41,7 +41,7 @@ class CreateNewPasswordScreen extends StatelessWidget {
                         "Create new password",
                         style: TextStyle(
                             fontSize: 25,
-                            color: Colors.black,
+                            
                             fontWeight: FontWeight.bold),
                       ),
                     ),
@@ -56,7 +56,7 @@ class CreateNewPasswordScreen extends StatelessWidget {
                       height: 20,
                     ),
                     Padding(
-                      padding: EdgeInsets.all(12.0),
+                      padding: const EdgeInsets.all(12.0),
                       child: Column(
                         children: [
                           FadeIn(

@@ -57,7 +57,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       child: const Text(
                         "to see you. Again!",
                         style: TextStyle(
-                            fontSize: 25,
+                            fontSize: 22,
                             fontWeight: FontWeight.bold,
                             fontFamily: "Urbanist-SemiBold"),
                       ),
@@ -128,7 +128,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       height: 50.0,
                     ),
                     Bounce(
-                      delay: const Duration(seconds: 4),
+                      delay: const Duration(seconds: 2),
                       child: Padding(
                         padding: const EdgeInsets.only(
                             top: 10, bottom: 10, right: 30, left: 30),
@@ -180,7 +180,8 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                   ],
                 ),
-              )
+              ),
+             
             ],
           ),
         ),
