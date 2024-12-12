@@ -1,5 +1,6 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
+import 'package:project/Presentation/Otp_Verification/opt_verificationScreen.dart';
 import 'package:project/Presentation/RegisterSCreen/RegisterScreen.dart';
 import 'package:project/core/widgets/CustomElevatedButtonDar.dart';
 import 'package:project/core/widgets/Custom_TextField.dart';
@@ -81,16 +82,23 @@ class _ForgetscreenState extends State<Forgetscreen> {
                           ),
                           FadeIn(
                             delay: const Duration(seconds: 3),
-                            child: const CustomElevatedButtomDark(
+                            child: CustomElevatedButtomDark(
+                                onpressed: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) =>
+                                            const OtpVerificationCode(),
+                                      ));
+                                },
                                 text: 'Send Code'),
                           ),
-                        
                         ],
                       ),
                     ),
-                      SizedBox(
-                            height: 370,
-                          ),
+                    SizedBox(
+                      height: 370,
+                    ),
                     Align(
                       alignment: Alignment.bottomCenter,
                       child: FadeIn(
