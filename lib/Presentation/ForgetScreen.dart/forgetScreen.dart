@@ -96,40 +96,35 @@ class _ForgetscreenState extends State<Forgetscreen> {
                         ],
                       ),
                     ),
-                    SizedBox(
-                      height: 370,
+                  ],
+                ),
+              ),
+              Spacer(),
+               FadeIn(
+                delay: const Duration(seconds: 4),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const Text(
+                      "Dont have an Account",
+                      style: TextStyle(color: Colors.grey),
                     ),
-                    Align(
-                      alignment: Alignment.bottomCenter,
-                      child: FadeIn(
-                        delay: const Duration(seconds: 5),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            const Text("Dont have an account?"),
-                            const SizedBox(
-                              width: 10,
+                    const SizedBox(
+                      width: 10.0,
+                    ),
+                    GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const RegisterScreen(),
                             ),
-                            GestureDetector(
-                              onTap: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) =>
-                                          const RegisterScreen(),
-                                    ));
-                              },
-                              child: const Text(
-                                "Register Now",
-                                style: TextStyle(
-                                    color: Colors.teal,
-                                    fontWeight: FontWeight.bold),
-                              ),
-                            )
-                          ],
-                        ),
-                      ),
-                    ),
+                          );
+                        },
+                        child: const Text(
+                          "Register Now?" ,
+                          style: TextStyle(color: Colors.teal,fontWeight: FontWeight.bold),
+                        ))
                   ],
                 ),
               ),

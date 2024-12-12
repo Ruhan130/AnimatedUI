@@ -97,11 +97,15 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                     FadeIn(
                       delay: const Duration(seconds: 3),
-                      child:  Align(
+                      child: Align(
                         alignment: Alignment.centerRight,
                         child: GestureDetector(
-                          onTap: (){
-                            Navigator.push(context, MaterialPageRoute(builder: (context) => const Forgetscreen(),));
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => const Forgetscreen(),
+                                ));
                           },
                           child: const Text(
                             "Forget Password? ",
@@ -114,7 +118,8 @@ class _LoginScreenState extends State<LoginScreen> {
                     const SizedBox(
                       height: 15.0,
                     ),
-                    FadeIn(delay: const Duration(seconds: 4),
+                    FadeIn(
+                      delay: const Duration(seconds: 4),
                       child: const CustomElevatedButtomDark(
                         text: "LOGIN",
                       ),
@@ -142,35 +147,40 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                       ),
                     ),
-                     const SizedBox(
-                      height: 140 
+                  ],
+                ),
+              ),
+              Spacer(),
+              FadeIn(
+                delay: const Duration(seconds: 4),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const Text(
+                      "Dont have an Account",
+                      style: TextStyle(color: Colors.grey),
                     ),
-                    FadeIn(
-                      delay: const Duration(seconds: 5),
-                      child:  Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          const Text("Dont have an account?"),
-                          const SizedBox(
-                            width: 10,
+                    const SizedBox(
+                      width: 10.0,
+                    ),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const RegisterScreen(),
                           ),
-                          GestureDetector(
-                            onTap: (){
-                              Navigator.push(context, MaterialPageRoute(builder: (context) => const RegisterScreen(),));
-                            },
-                            child: const Text(
-                              "Register Now",
-                              style: TextStyle(
-                                  color: Colors.teal,
-                                  fontWeight: FontWeight.bold),
-                            ),
-                          )
-                        ],
+                        );
+                      },
+                      child: const Text(
+                        "Register Now?",
+                        style: TextStyle(
+                            color: Colors.teal, fontWeight: FontWeight.bold),
                       ),
                     ),
                   ],
                 ),
-              ),
+              )
             ],
           ),
         ),

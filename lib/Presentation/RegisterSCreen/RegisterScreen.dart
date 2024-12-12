@@ -191,23 +191,34 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   ),
                 ),
               ),
-              const SizedBox(
-                height: 10,
-              ),
+              Spacer(),
               FadeIn(
-                delay: const Duration(seconds: 6),
-                child: const Row(
+                delay: const Duration(seconds: 4),
+                child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text("Dont have an account?"),
-                    SizedBox(
-                      width: 10,
+                    const Text(
+                      "Dont have an Account",
+                      style: TextStyle(color: Colors.grey),
                     ),
-                    Text(
-                      "Register Now",
-                      style: TextStyle(
-                          color: Colors.teal, fontWeight: FontWeight.bold),
-                    )
+                    const SizedBox(
+                      width: 10.0,
+                    ),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const RegisterScreen(),
+                          ),
+                        );
+                      },
+                      child: const Text(
+                        "Register Now?",
+                        style: TextStyle(
+                            color: Colors.teal, fontWeight: FontWeight.bold),
+                      ),
+                    ),
                   ],
                 ),
               ),
