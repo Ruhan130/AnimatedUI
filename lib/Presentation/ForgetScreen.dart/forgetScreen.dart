@@ -66,7 +66,7 @@ class _ForgetscreenState extends State<Forgetscreen> {
                       height: 25.0,
                     ),
                     Padding(
-                      padding: EdgeInsets.all(10.0),
+                      padding: const EdgeInsets.all(10.0),
                       child: Column(
                         children: [
                           FadeIn(
@@ -99,8 +99,8 @@ class _ForgetscreenState extends State<Forgetscreen> {
                   ],
                 ),
               ),
-              Spacer(),
-               FadeIn(
+              const Spacer(),
+              FadeIn(
                 delay: const Duration(seconds: 4),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -113,18 +113,20 @@ class _ForgetscreenState extends State<Forgetscreen> {
                       width: 10.0,
                     ),
                     GestureDetector(
-                        onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => const RegisterScreen(),
-                            ),
-                          );
-                        },
-                        child: const Text(
-                          "Register Now?" ,
-                          style: TextStyle(color: Colors.teal,fontWeight: FontWeight.bold),
-                        ))
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const RegisterScreen(),
+                          ),
+                        );
+                      },
+                      child: const Text(
+                        "Register Now?",
+                        style: TextStyle(
+                            color: Colors.teal, fontWeight: FontWeight.bold),
+                      ),
+                    ),
                   ],
                 ),
               ),

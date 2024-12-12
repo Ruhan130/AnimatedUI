@@ -150,7 +150,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   ],
                 ),
               ),
-              Spacer(),
+              const Spacer(),
               FadeIn(
                 delay: const Duration(seconds: 4),
                 child: Row(
